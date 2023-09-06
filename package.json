@@ -1,0 +1,15 @@
+{
+  "name": "bdnn-2023-2",
+  "version": "1.0.0",
+  "description": "Banco de Dados NoSQL com NodeJS",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "nodemon src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
