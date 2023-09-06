@@ -14,6 +14,7 @@ app.set('view engine', 'handlebars')
 app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => res.render('home'))
+
 async function main() {
 	app.listen(8000, () => console.log('[main.ts] Server listening at http://localhost:8000'))
 }
