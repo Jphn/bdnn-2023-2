@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Banco de Dados NoSQL com NodeJS",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/main.js"
   },
