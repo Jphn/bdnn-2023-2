@@ -1,0 +1,114 @@
+/*
+HEADER
+*/
+
+header {
+	width: 100vw;
+	height: 12vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--primary-color);
+}
+
+header span {
+	width: max-content;
+	margin: 1.0rem;
+
+	font-family: 'Oswald', sans-serif;
+	font-size: 6.2rem;
+	color: var(--white-color);
+}
+
+/*
+TODOS SECTION
+*/
+
+.container {
+	width: 100vw;
+	height: fit-content;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container h1 {
+	font-size: 4.7rem;
+	margin: 3.0rem 0;
+
+}
+
+.container ul {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2.2rem;
+}
+
+.container ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: var(--secondary-color);
+
+	padding: 1.6rem;
+	border-radius: 1.0rem;
+
+	box-shadow: 0rem 0rem 1rem 0;
+}
+
+.container ul li input[type=checkbox] {
+	width: 2.5rem;
+	height: 2.5rem;
+
+	cursor: pointer;
+}
+
+.container ul li span {
+	font-size: 2.3rem;
+
+	color: var(--white-color);
+}
+
+.container ul li span.concluded {
+	text-decoration: line-through;
+}
+
+/*
+FOOTER
+*/
+
+footer {
+	position: fixed;
+	bottom: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	width: 100vw;
+	height: 6vh;
+
+	background-color: var(--primary-color);
+}
+
+footer .social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
+}
+
+footer .social a img {
+	width: 4.2rem;
+}

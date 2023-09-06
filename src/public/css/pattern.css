@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald:wght@600&display=swap');
+
+:root {
+	--primary-color: #80CED7;
+	--secondary-color: #003249;
+	--black-color: #222831;
+	--black-color-medium: #0c0c0c;
+	--semi-black: #393e46;
+	--white-color: #eeeeee;
+}
+
+* {
+	font-family: 'Fira Sans', sans-serif;
+	/* font-family: 'Oswald', sans-serif; */
+	color: var(--black-color-medium);
+}
+
+body {
+	background-color: var(--white-color);
+}
