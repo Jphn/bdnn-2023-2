@@ -19,5 +19,4 @@ async function main() {
 	app.listen(8000, () => console.log('[main.ts] Server listening at http://localhost:8000'))
 }
 
-main()
-	.catch(err => console.log(err))
+await main()
