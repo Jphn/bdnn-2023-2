@@ -27,11 +27,13 @@
 -   Front-end
     -   Visualizações (Views)
 -   Back-end
+    -   Servidor em NodeJS (Fastify)
+    -   Criação do modelo "tarefas"
     -   Modelos (Models)
     -   Controladores (Controllers)
-    -   Servidor em NodeJS (Express)
-    -   Criação do modelo "tarefas"
     -   Controladores
-        -   Criação do fluxo de adicionar tarefas
-        -   Criação do fluxo de listar as tarefas
-        -   Criação do fluxo de concluir uma tarefa
+        -   Adicionar tarefas
+        -   Listar as tarefas
+        -   Atualizar uma tarefa
+        -   Deletar uma tarefa
+-   E o front?
