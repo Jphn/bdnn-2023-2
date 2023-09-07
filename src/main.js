@@ -9,8 +9,8 @@ const app = express()
 
 app.use('/static', express.static(__dirname + '/public'))
 
-app.engine('handlebars', engine())
-app.set('view engine', 'handlebars')
+app.engine('hbs', engine({ extname: '.hbs' }))
+app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => res.render('home'))
