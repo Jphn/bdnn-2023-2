@@ -12,23 +12,26 @@ POST {{host}}/tasks HTTP/1.1
 content-type: application/json
 
 {
-	"description": "Andar com o cachorro"
+	"description": "Andar a com o cachorro"
 }
 
 ###
 
-GET {{host}}/tasks HTTP/1.1
+GET {{host}}/tasks?done=1 HTTP/1.1
 
 ###
 
-PUT {{host}}/tasks/64fa499c28c0b3e9265a8fa8 HTTP/1.1
+PUT {{host}}/tasks/6510b1492a5ef8a6dc9781d8 HTTP/1.1
 content-type: application/json
 
 {
-	"description": "Subir pro gitub",
-	"done": false
+	"description": "Subir pro github"
 }
 
 ###
 
 DELETE {{host}}/tasks/64fa499c28c0b3e9265a8fa6 HTTP/1.1
+
+###
+
+PUT {{host}}/tasks/6510b1492a5ef8a6dc9781d8/toggle
