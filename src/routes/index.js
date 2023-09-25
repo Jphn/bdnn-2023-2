@@ -2,6 +2,7 @@ import {
 	createOne,
 	deleteOne,
 	getAll,
+	toggleOne,
 	updateOne,
 } from '../controllers/tasks.js'
 
@@ -22,6 +23,7 @@ export default async function (app, options, done) {
 		.get('/tasks', getAll)
 		.put('/tasks/:id', updateOne)
 		.delete('/tasks/:id', deleteOne)
+		.put('/tasks/:id/toggle', toggleOne)
 
 	done()
 }
