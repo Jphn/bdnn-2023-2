@@ -64,4 +64,23 @@ async function deleteOne(req, rep) {
 	rep.status(200).send({ message: 'Task successfully deleted!' })
 }
 
-export { createOne, deleteOne, getAll, updateOne }
+/**
+ *
+ * @param {import('fastify').FastifyRequest} req
+ * @param {import('fastify').FastifyReply} rep
+ */
+async function toggleOne(req, rep) {
+	const { id } = req.params
+
+	const task = await TaskModel.findById(id)
+
+	if (task === null) return rep.status(204).send()
+
+	await task.updateOne({
+		done: !task.done,
+	})
+
+	return rep.status(202).send({ message: 'Task successfully toggled.' })
+}
+
+export { createOne, deleteOne, getAll, toggleOne, updateOne }
