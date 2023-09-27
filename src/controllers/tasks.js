@@ -41,14 +41,18 @@ async function getAll(req, rep) {
 async function updateOne(req, rep) {
 	const { id } = req.params
 
-	const { description, done } = req.body
+	const task = await TaskModel.findById(id)
 
-	await TaskModel.findByIdAndUpdate(id, {
+	if (task === null)
+		return rep.status(404).send({ message: 'Task ID not found.' })
+
+	const { description } = req.body
+
+	await task.updateOne({
 		description,
-		done,
 	})
 
-	rep.status(200).send({ message: 'Task successfully updated!' })
+	return rep.status(200).send({ message: 'Task successfully updated.' })
 }
 
 /**
