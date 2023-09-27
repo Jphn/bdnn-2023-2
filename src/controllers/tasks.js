@@ -78,7 +78,8 @@ async function toggleOne(req, rep) {
 
 	const task = await TaskModel.findById(id)
 
-	if (task === null) return rep.status(204).send()
+	if (task === null)
+		return rep.status(404).send({ message: 'Task ID not found.' })
 
 	await task.updateOne({
 		done: !task.done,
