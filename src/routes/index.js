@@ -4,7 +4,7 @@ import {
 	getAll,
 	toggleOne,
 	updateOne,
-} from '../controllers/tasks.js'
+} from '../controllers/task.controller.js'
 
 /**
  *
@@ -19,11 +19,11 @@ export default async function (app, options, done) {
 		})
 	)
 
-	app.post('/tasks', createOne)
-		.get('/tasks', getAll)
-		.put('/tasks/:id', updateOne)
-		.delete('/tasks/:id', deleteOne)
-		.put('/tasks/:id/toggle', toggleOne)
+	app.post('/task', createOne)
+		.get('/task', getAll)
+		.put('/task/:id', updateOne)
+		.delete('/task/:id', deleteOne)
+		.put('/task/:id/toggle', toggleOne)
 
 	done()
 }

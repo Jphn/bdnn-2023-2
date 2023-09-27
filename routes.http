@@ -1,6 +1,7 @@
 @hostname = localhost
 @port = 8000
 @host = http://{{hostname}}:{{port}}
+@taskId = 6510b1502a5ef8a6dc9781db
 
 ###
 
@@ -8,7 +9,7 @@ GET {{host}} HTTP/1.1
 
 ###
 
-POST {{host}}/tasks HTTP/1.1
+POST {{host}}/task HTTP/1.1
 content-type: application/json
 
 {
@@ -17,21 +18,21 @@ content-type: application/json
 
 ###
 
-GET {{host}}/tasks?done=1 HTTP/1.1
+GET {{host}}/task HTTP/1.1
 
 ###
 
-PUT {{host}}/tasks/6510b1492a5ef8a6dc9781d8 HTTP/1.1
+PUT {{host}}/task/{{taskId}} HTTP/1.1
 content-type: application/json
 
 {
-	"description": "Subir pro github"
+	"description": "Comer veneno"
 }
 
 ###
 
-DELETE {{host}}/tasks/64fa499c28c0b3e9265a8fa6 HTTP/1.1
+DELETE {{host}}/task/{{taskId}} HTTP/1.1
 
 ###
 
-PUT {{host}}/tasks/6510b1492a5ef8a6dc9781d8/toggle
+PUT {{host}}/task/{{taskId}}/toggle HTTP/1.1

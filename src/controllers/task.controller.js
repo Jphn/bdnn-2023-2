@@ -63,7 +63,12 @@ async function updateOne(req, rep) {
 async function deleteOne(req, rep) {
 	const { id } = req.params
 
-	await TaskModel.findByIdAndDelete(id)
+	const task = await TaskModel.findById(id)
+
+	if (task === null)
+		return rep.status(404).send({ message: 'Task ID not found.' })
+
+	await task.deleteOne()
 
 	return rep.status(200).send({ message: 'Task successfully deleted!' })
 }
