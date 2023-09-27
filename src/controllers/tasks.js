@@ -15,7 +15,7 @@ async function createOne(req, rep) {
 
 	await newTask.save()
 
-	rep.status(200).send({ message: 'Task successfully created!' })
+	return rep.status(200).send({ message: 'Task successfully created!' })
 }
 
 /**
@@ -30,7 +30,7 @@ async function getAll(req, rep) {
 
 	const tasks = await TaskModel.find(search)
 
-	rep.status(tasks.length === 0 ? 204 : 200).send(tasks)
+	return rep.status(tasks.length === 0 ? 204 : 200).send(tasks)
 }
 
 /**
@@ -65,7 +65,7 @@ async function deleteOne(req, rep) {
 
 	await TaskModel.findByIdAndDelete(id)
 
-	rep.status(200).send({ message: 'Task successfully deleted!' })
+	return rep.status(200).send({ message: 'Task successfully deleted!' })
 }
 
 /**
